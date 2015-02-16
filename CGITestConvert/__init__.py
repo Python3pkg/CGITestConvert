@@ -107,6 +107,7 @@ def cgitest_read(filename):
 
 def chan_write(filename, cgitest_dict, start_frame=1):
     """Given a filename and a CGITest dictionary, writes a chan file"""
+    filename += '.chan'
     data = []
     for i in range(len(cgitest_dict)):
         frame = cgitest_dict[i]
@@ -145,7 +146,7 @@ def main():
     data = cgitest_read(filepath)
 
     chan_write(
-        os.path.join(destination_dir, filename, 'chan'),
+        os.path.join(destination_dir, filename),
         data,
         start_frame=args.frame
     )

@@ -135,11 +135,11 @@ def main():
     destination_dir = os.path.abspath(args.destination)
 
     if not os.path.exists(destination_dir):
-        print((
+        print(
             "Destination directory {dir} does not exist.".format(
                 dir=destination_dir
             )
-        ))
+        )
         print("Creating destination directory.")
         os.makedirs(destination_dir)
 
